@@ -73,5 +73,4 @@ void test_rt_book_3_final() {
   world = HittableList(std::make_shared<HittableList::BVHNode>(world));
 
   camera.render(world, important_sampling_objects);
- 
 }

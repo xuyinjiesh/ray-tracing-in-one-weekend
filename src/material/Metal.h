@@ -18,7 +18,7 @@ class Metal : public Material {
     scatter_record.mode = ScatterRecord::ScatterMode::DIRECT_RAY;
     scatter_record.pdf_out = nullptr;
     auto reflected = reflect(unit_vector(ray_in.direction), hit_record.normal);
-    scatter_record.ray_out = Ray(hit_record.p, reflected + fuzz * random_in_unit_disk());
+    scatter_record.ray_out = Ray(hit_record.p, reflected + fuzz * random_in_unit_sphere());
     return scatter_record;
   }
  private:
